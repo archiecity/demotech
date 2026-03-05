@@ -71,6 +71,11 @@ conda list		  （查看本环境下所有的包）
 conda list numpy  (检查numpy包的信息)
 ```
 
+## 切换文件夹
+```
+cd 文件夹名    cd ..（退出）
+```
+
 ## pytorch下载
 
 ```python

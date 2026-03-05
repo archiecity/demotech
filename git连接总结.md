@@ -63,3 +63,30 @@ git clone https://github.com/user/repo.git .
 ```
 结果： Git 不会再新建任何下级文件夹，而是把仓库里的所有文件直接“倒进”你现在所在的这个文件夹里。
 
+## 有梯子情况下的克隆配置
+
+第一步：去你的梯子软件找一下端口号
+
+第二步：给 Git 设置代理
+在你的命令行复制并回车运行下面这两行命令。
+(注意：如果你用的不是 Clash，请把下面命令里的 7890 换成你实际的端口号)
+
+```
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+```
+运行完这两行命令后，屏幕上不会有任何提示代表设置成功。
+
+第三步：重新克隆
+```
+git clone https://github.com/openclaw/openclaw.git
+```
+
+🎁 附赠一个“后悔药”命令：
+如果你哪天把代理软件关了，发现 Git 又报错连不上了。那是因为 Git 还在找 7890 端口。
+运行下面这两行命令取消代理设置，恢复直连：
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+

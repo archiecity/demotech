@@ -105,3 +105,7 @@ python name.py
 ```
 
 进行运行
+
+## vscode 不显示环境名
+终端界面右上角➕号旁边的下拉按钮，选择用command prompt 
+原因： powershell与vscode之间有bug
